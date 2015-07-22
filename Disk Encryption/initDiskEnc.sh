@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 if [ -z ${1} ]
@@ -12,7 +11,3 @@ else
 	echo "Encryption Completed!"
 	echo "You can now write to /mnt/EncryptedDisk to write your encrypted disk."
 fi
-
-
-
-
