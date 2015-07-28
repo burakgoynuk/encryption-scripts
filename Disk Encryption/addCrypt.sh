@@ -8,7 +8,7 @@ else
 	encryptedDisk=${1}	
 	cryptsetup create newMapper ${encryptedDisk}	
 	#sudo mkfs.ext2 /dev/mapper/newMapper
-	mount -t ext2 /dev/mapper/newMapper /mnt/EncrpytedDisk			
+	mount -t ext2 /dev/mapper/newMapper /mnt/EncryptedDisk			
 	echo "Encryption Completed!"
 	echo "You can now write to /mnt/EncryptedDisk to write your encrypted disk."
 
