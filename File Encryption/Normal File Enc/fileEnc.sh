@@ -7,7 +7,6 @@ passwordFileNotFound(){
 if [ -z ${1} ] || [ -z ${2} ] || [ -z ${3} ]
 then 
 	echo "Usage of this script is: ./fileEnc /path/to/file/to/encrypt /path/to/encrypted/file [PASSWORD_FILE]"
-	echo "Note that the USB which contains pasword must be connected."
 else
 	toBeEncryptedFilePath=${1}
 	encryptedFile=${2}
@@ -34,7 +33,6 @@ else
 	else
 		# Password file is NOT exist
 		echo "Password file is NOT found!"
-		echo "Try to use correct USB!"
 	
 	fi
 fi
