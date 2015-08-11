@@ -6,7 +6,7 @@ passwordFileNotFound(){
 
 if [ -z ${1} ] || [ -z ${2} ] || [ -z ${3} ]
 then 
-	echo "Usage of this script is: ./fileEnc /path/to/file/to/encrypt /path/to/encrypted/file [PASSWORD_FILE]"
+	echo "Usage of this script is: ${0} /path/to/file/to/encrypt /path/to/encrypted/file [PASSWORD_FILE]"
 else
 	toBeEncryptedFilePath=${1}
 	encryptedFile=${2}
@@ -27,12 +27,9 @@ else
 			echo "Password is not set, wrong File!";
 		else
 			openssl enc -aes-128-cbc -nosalt -pass pass:$password -in $toBeEncryptedFilePath -out $encryptedFile
-
 		fi
-
 	else
 		# Password file is NOT exist
 		echo "Password file is NOT found!"
-	
 	fi
 fi

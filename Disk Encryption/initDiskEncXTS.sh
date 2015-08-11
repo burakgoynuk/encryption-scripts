@@ -2,7 +2,7 @@
 
 if [ -z ${1} ]
 then
-	echo "The usage of this script is: ./initDiskEnc.sh /path/to/disk/to/be/encrypted"
+	echo "The usage of this script is: ${0} /path/to/disk/to/be/encrypted"
 	echo "Before starting, make sure that you have created /mnt/EncryptedDisk"
 else
 	encryptedDisk=${1}	

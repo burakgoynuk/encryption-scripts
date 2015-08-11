@@ -1,17 +1,13 @@
 #!/bin/sh
 
-#### Functions!!
-
 passwordFileNotFound(){
 	echo "Password file is NOT found!";
 	echo "Try to use correct USB!"
 }
 
-
 if [ -z ${1} ] || [ -z ${2} ]
 then 
-	echo "Usage of this script is: ./imageEnc /path/to/image/to/encrypt /path/to/password/file" 
-
+	echo "Usage of this script is: ${0} /path/to/image/to/encrypt /path/to/password/file" 
 
 else
 	imageFile=${1}
@@ -50,8 +46,3 @@ else
 	rm header.txt	
 	rm body.bin
 fi
-
-
-
-
-
