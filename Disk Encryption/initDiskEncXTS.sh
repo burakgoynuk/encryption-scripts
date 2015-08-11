@@ -6,7 +6,7 @@ then
 	echo "Before starting, make sure that you have created /mnt/EncryptedDisk"
 else
 	encryptedDisk=${1}	
-	cryptsetup create newMapper ${encryptedDisk}	 	
+	cryptsetup --cipher aes-xts-plain64 create newMapper ${encryptedDisk}	 	
 	mkfs /dev/mapper/newMapper
 	mount -t ext2 /dev/mapper/newMapper /mnt/EncryptedDisk			
 	echo "Encryption Completed!"

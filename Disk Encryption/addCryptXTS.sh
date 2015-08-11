@@ -6,7 +6,7 @@ then
 	echo "The usage of this script is: ./addCrypt /path/to/disk/to/be/encrypted"
 else	
 	encryptedDisk=${1}	
-	cryptsetup create newMapper ${encryptedDisk}	
+	cryptsetup --cipher aes-xts-plain64 create newMapper ${encryptedDisk}	
 	#sudo mkfs.ext2 /dev/mapper/newMapper
 	mount -t ext2 /dev/mapper/newMapper /mnt/EncryptedDisk			
 	echo "Encryption Completed!"

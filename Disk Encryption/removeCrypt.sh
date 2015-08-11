@@ -2,7 +2,7 @@
 
 #### Functions!!
 
-umount /mnt/EncrpytedDisk	
+umount /mnt/EncryptedDisk	
 cryptsetup remove newMapper		
 echo "Remove operation is Completed!"
 
